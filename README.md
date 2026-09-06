@@ -29,9 +29,7 @@ Job Board is a full-stack job portal designed to make job searching, applying, a
 | Frontend | HTML, CSS, JavaScript |
 | Backend | Node.js, Express.js |
 | Database | MongoDB Atlas |
-| ODM | Mongoose |
 | Authentication | JWT |
-| File Upload | Multer |
 
 ---
 
