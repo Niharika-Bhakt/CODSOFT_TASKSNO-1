@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidate Dashboard - Career Pulse</title>
+    <link rel="stylesheet" href="candidate-dashboard.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">Career Pulse</div>
+        <nav class="nav-links">
+            <a href="index.html" class="back-home-btn">🏠 Back to Home</a>
+            <a href="jobs.html">Jobs</a>
+            <a href="candidate-dashboard.html" class="active">Dashboard</a>
+        </nav>
+    </header>
+
+    <main class="dashboard-container">
+        <!-- Top Welcome Banner -->
+        <section class="dashboard-header">
+            <h1>Welcome Back, <span id="candidateNameDisplay">Candidate</span>!</h1>
+            <p>Manage your profile, CV, skills, and track your job application responses and offer letters.</p>
+        </section>
+
+        <div class="dashboard-grid">
+            <!-- Left Side: Profile & CV Management -->
+            <aside class="profile-sidebar">
+                <div class="card">
+                    <h2>My Profile & CV</h2>
+                    <form id="profileForm" onsubmit="saveProfile(event)">
+                        <label>Full Name</label>
+                        <input type="text" id="profileName" placeholder="Enter your name" required>
+
+                        <label>Professional Title</label>
+                        <input type="text" id="profileTitle" placeholder="e.g. Full Stack Developer" required>
+
+                        <label>Experience (Years)</label>
+                        <input type="text" id="profileExp" placeholder="e.g. 3 Years" required>
+
+                        <label>Key Skills (Comma separated)</label>
+                        <input type="text" id="profileSkills" placeholder="React, Node, JavaScript" required>
+
+                        <label>Upload/Update CV (PDF/DOCX)</label>
+                        <input type="file" id="profileResume" accept=".pdf,.doc,.docx">
+                        <p id="resumeStatus" class="small-text" style="color: green; margin-top: 5px;"></p>
+
+                        <button type="submit" class="btn-primary">Save Profile</button>
+                    </form>
+                </div>
+            </aside>
+
+            <!-- Right Side: Track Applications & Offers -->
+            <section class="applications-section">
+                <!-- Applied Jobs Tracker -->
+                <div class="card mb-20">
+                    <h2>Applied Jobs & Status</h2>
+                    <div id="appliedJobsList">
+                        <p class="empty-text">You haven't applied to any jobs yet.</p>
+                    </div>
+                </div>
+
+                <!-- Offer Letters Received -->
+                <div class="card">
+                    <h2>Offer Letters & Responses</h2>
+                    <div id="offerLettersList">
+                        <p class="empty-text">No offer letters received yet. Keep applying!</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="candidate-dashboard.js"></script>
+</body>
+</html>

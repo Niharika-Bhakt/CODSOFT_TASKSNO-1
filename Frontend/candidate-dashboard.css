@@ -1,0 +1,330 @@
+:root {
+    --primary: #4f46e5;
+    --primary-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
+    --bg-gradient: linear-gradient(135deg, #fdf4ff 0%, #eef2ff 50%, #f0fdf4 100%);
+    --card-bg: rgba(255, 255, 255, 0.9);
+    --text-main: #1e1b4b;
+    --text-muted: #6b7280;
+    --border: #e0e7ff;
+    --radius: 16px;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+    background: var(--bg-gradient);
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    color: var(--text-main);
+    min-height: 100vh;
+}
+
+/* Vibrant Glassmorphic Navbar */
+.navbar {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(16px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    box-shadow: 0 4px 30px rgba(99, 102, 241, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(224, 231, 255, 0.6);
+}
+
+.logo {
+    font-weight: 900;
+    font-size: 24px;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.5px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    color: #4b5563;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.navbar nav a:hover {
+    color: #4f46e5;
+    background: #eef2ff;
+}
+
+.navbar nav a.active {
+    color: #ffffff;
+    background: var(--primary-gradient);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+/* Super Vibrant Back to Home Button */
+.back-home-btn {
+    background: var(--primary-gradient) !important;
+    color: #ffffff !important;
+    padding: 10px 20px !important;
+    border-radius: 30px !important;
+    font-weight: 700 !important;
+    box-shadow: 0 6px 20px rgba(168, 85, 247, 0.4);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.back-home-btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(236, 72, 153, 0.5) !important;
+}
+
+.back-home-btn:active {
+    transform: translateY(1px);
+}
+
+/* Dashboard Layout & Headers */
+.dashboard-container {
+    max-width: 1240px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.dashboard-header {
+    margin-bottom: 35px;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(236, 72, 153, 0.1));
+    padding: 30px;
+    border-radius: var(--radius);
+    border: 1px solid rgba(224, 231, 255, 0.8);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+}
+
+.dashboard-header h1 {
+    font-size: 32px;
+    font-weight: 900;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+.dashboard-header h1 span {
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.dashboard-header p {
+    color: #4b5563;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 30px;
+}
+
+@media (max-width: 900px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Colorful Pop Cards */
+.card {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: 0 15px 35px rgba(99, 102, 241, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 20px 40px rgba(168, 85, 247, 0.12);
+    transform: translateY(-2px);
+}
+
+.mb-20 {
+    margin-bottom: 24px;
+}
+
+.card h2 {
+    font-size: 20px;
+    font-weight: 800;
+    margin-top: 0;
+    margin-bottom: 22px;
+    color: #312e81;
+    border-bottom: 3px solid #e0e7ff;
+    padding-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Form Styles with Colorful Accents */
+form label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #4338ca;
+    letter-spacing: 0.3px;
+}
+
+form input {
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 18px;
+    border: 2px solid #e0e7ff;
+    border-radius: 12px;
+    font-size: 14px;
+    box-sizing: border-box;
+    background: #ffffff;
+    transition: all 0.3s ease;
+    color: #1e1b4b;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+}
+
+input[type="file"] {
+    padding: 10px;
+    background: #eef2ff;
+    cursor: pointer;
+    border: 2px dashed #a5b4fc;
+}
+
+.btn-primary {
+    background: var(--primary-gradient);
+    color: white;
+    border: none;
+    padding: 14px 20px;
+    width: 100%;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.35);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(168, 85, 247, 0.45);
+}
+
+.btn-primary:active {
+    transform: translateY(1px);
+}
+
+/* Colorful Item Cards (Applied Jobs & Offers) */
+.item-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    border: 2px solid #eef2ff;
+    padding: 20px;
+    border-radius: 14px;
+    margin-bottom: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.item-card:hover {
+    border-color: #a5b4fc;
+    background: #faf8ff;
+    transform: translateX(4px);
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.08);
+}
+
+.item-card h3 {
+    margin: 0 0 6px 0;
+    font-size: 17px;
+    font-weight: 800;
+    color: #312e81;
+}
+
+.item-card p {
+    margin: 4px 0;
+    font-size: 13px;
+    color: #4b5563;
+    font-weight: 500;
+}
+
+.date-text {
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+/* Pop Status Badges */
+.status-badge {
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #fef3c7, #fde68a);
+    color: #b45309;
+    box-shadow: 0 2px 10px rgba(245, 158, 11, 0.2);
+    letter-spacing: 0.3px;
+}
+
+/* Super Vibrant Offer Card */
+.offer-card {
+    background: linear-gradient(135deg, #f0fdf4, #dcfce7) !important;
+    border: 2px solid #86efac !important;
+    box-shadow: 0 8px 25px rgba(34, 197, 94, 0.1) !important;
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(34, 197, 94, 0.45);
+}
+
+.empty-text {
+    color: #9ca3af;
+    font-size: 14px;
+    font-style: italic;
+    text-align: center;
+    padding: 25px 0;
+    margin: 0;
+    font-weight: 500;
+}
+
+.small-text {
+    font-size: 12px;
+    font-weight: 600;
+    color: #16a34a;
+}

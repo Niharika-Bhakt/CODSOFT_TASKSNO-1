@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recruiter Portal - CareerPulse</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="employee-dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+       (function(){
+          emailjs.init("YOUR_PUBLIC_KEY"); // Yahan apni EmailJS Public Key dalein
+       })();
+    </script>
+</head>
+<body>
+    <header>
+        <div class="nav-left">
+            <div class="logo header-logo">
+                <span class="logo-icon"><i class="fa-solid fa-layer-group"></i></span>
+                <span>Career</span><span>Pulse</span>
+            </div>
+        </div>
+
+        <nav class="nav-links">
+            <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="index.html#jobs"><i class="fa-solid fa-compass"></i> Jobs</a>
+            <a href="candidate-dashboard.html"><i class="fa-solid fa-user-gear"></i> Candidate Portal</a>
+            <a href="employee-dashboard.html" class="active"><i class="fa-solid fa-building-user"></i> Recruiter Portal</a>
+            <a href="index.html#calculator"><i class="fa-solid fa-calculator"></i> Salary Estimator</a>
+            <a href="index.html#testimonials"><i class="fa-solid fa-star"></i> Reviews</a>
+            <a href="index.html#about"><i class="fa-solid fa-circle-info"></i> About</a>
+        </nav>
+
+        <div class="nav-right">
+            <a href="login.html" class="btn-outline login-trigger-btn">
+                <i class="fa-solid fa-user"></i> Log In
+            </a>
+        </div>
+    </header>
+
+    <main class="dashboard-container">
+        <div class="dashboard-header">
+            <div>
+                <h1>Recruiter Application Manager</h1>
+                <p>Manage candidate applications and trigger automated email status updates instantly.</p>
+            </div>
+        </div>
+
+        <div class="dashboard-card">
+            <h3>Incoming Candidate Applications</h3>
+            <div class="table-responsive">
+                <table class="applications-table">
+                    <thead>
+                        <tr>
+                            <th>Candidate Name & Email</th>
+                            <th>Applied Job Title</th>
+                            <th>Application Date</th>
+                            <th>Current Status</th>
+                            <th>Update Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="applicationsTableBody">
+                        <!-- Dynamically populated via employee-dashboard.js -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="employee-dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Details - Career Pulse</title>
+    <link rel="stylesheet" href="job-detail.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">Career Pulse</div>
+        <nav>
+         <a href="index.html" class="back-home-btn">← Back to Homepage</a>
+        </nav>
+    </header>
+
+    <!-- Main Job Detail Section -->
+    <main class="job-detail-container">
+        <div class="job-header-card">
+            <div class="job-company-info">
+                <h1 id="jobTitle">Loading Job Title...</h1>
+                <p id="companyName">Company Name</p>
+                <span id="jobLocation" class="badge">Location</span>
+                <span id="jobType" class="badge">Full-time</span>
+            </div>
+            <div class="job-action-box">
+                <h3 id="jobSalary">$0 - $0 / month</h3>
+                <button id="applyBtn" class="btn-primary" onclick="openApplyModal()">Apply Now</button>
+            </div>
+        </div>
+
+        <div class="job-content-grid">
+            <div class="job-description-box">
+                <h2>Job Description</h2>
+                <p id="jobDesc">Detailed description will appear here...</p>
+                
+                <h2>Key Responsibilities</h2>
+                <ul id="jobResponsibilities">
+                    <!-- Dynamic list -->
+                </ul>
+
+                <h2>Required Skills</h2>
+                <div id="jobSkills" class="skills-flex">
+                    <!-- Dynamic skills tags -->
+                </div>
+            </div>
+
+            <div class="company-sidebar">
+                <h3>About Company</h3>
+                <p id="companyAbout">Company overview details...</p>
+                <hr>
+                <p><strong>Verified Employer:</strong> <span id="verifiedStatus">Yes</span></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Application Modal with Resume Upload -->
+    <div id="applyModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeApplyModal()">&times;</span>
+            <h2>Apply for <span id="modalJobTitle">Job</span></h2>
+            <form id="applicationForm" onsubmit="submitApplication(event)">
+                <label>Full Name</label>
+                <input type="text" id="applicantName" required placeholder="Enter your full name">
+
+                <label>Email Address</label>
+                <input type="email" id="applicantEmail" required placeholder="Enter your email">
+
+                <label>Phone Number</label>
+                <input type="tel" id="applicantPhone" required placeholder="Enter phone number">
+
+                <label>Upload Resume / CV (PDF, DOCX)</label>
+                <input type="file" id="applicantResume" accept=".pdf,.doc,.docx" required>
+
+                <button type="submit" class="btn-primary submit-btn">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="job-detail.js"></script>
+</body>
+</html>

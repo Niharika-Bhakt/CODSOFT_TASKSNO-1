@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post a Vacancy - CareerPulse</title>
+    <link rel="stylesheet" href="post-job.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="job-page-wrapper">
+        <div class="job-card">
+            <a href="index.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+            
+            <div class="job-header">
+                <div class="icon-box"><i class="fa-solid fa-briefcase"></i></div>
+                <h2>Post a New Vacancy</h2>
+                <p>Reach out to 100k+ top tech professionals instantly.</p>
+            </div>
+
+            <form id="jobForm">
+                <div class="input-row">
+                    <div class="input-group">
+                        <label>Job Title</label>
+                        <input type="text" id="jobTitle" placeholder="e.g. Senior Frontend Developer" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Company Name</label>
+                        <input type="text" id="companyName" placeholder="e.g. Google" required>
+                    </div>
+                </div>
+
+                <div class="input-row">
+                    <div class="input-group">
+                        <label>Location</label>
+                        <input type="text" id="jobLocation" placeholder="e.g. Remote / Bangalore" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Salary Range</label>
+                        <input type="text" id="jobSalary" placeholder="e.g. $120k - $150k" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Job Description & Requirements</label>
+                    <textarea id="jobDesc" rows="4" placeholder="Describe the role, tech stack, and responsibilities..." required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <span>Publish Vacancy</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="post-job.js"></script>
+</body>
+</html>

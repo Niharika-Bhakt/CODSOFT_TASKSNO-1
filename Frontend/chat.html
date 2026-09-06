@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerPulse - Messages</title>
+    <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+
+    <!-- Chat Section Container -->
+    <div class="chat-container">
+        <!-- Left Sidebar: Contacts List -->
+        <div class="chat-sidebar">
+            <h3>Messages</h3>
+            <div class="chat-search">
+                <input type="text" placeholder="Search messages..." />
+            </div>
+            <div class="contact-list">
+                <div class="contact-item active">
+                    <div class="contact-avatar">R</div>
+                    <div class="contact-info">
+                        <h4>HR Manager (TechCorp)</h4>
+                        <p>Thanks for applying!</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-avatar">A</div>
+                    <div class="contact-info">
+                        <h4>Recruiter (InnovateX)</h4>
+                        <p>Are you available for an interview?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Main Chat Window -->
+        <div class="chat-window">
+            <div class="chat-header">
+                <div class="contact-avatar">R</div>
+                <h3>HR Manager (TechCorp)</h3>
+            </div>
+            
+            <!-- Messages Display Area -->
+            <div class="chat-messages" id="chatMessages">
+                <div class="message received">
+                    <p>Hello! We reviewed your application for the Software Engineer role.</p>
+                    <span class="time">10:45 AM</span>
+                </div>
+                <div class="message sent">
+                    <p>Hello! Thank you for reaching out. I am very excited about this opportunity.</p>
+                    <span class="time">10:48 AM</span>
+                </div>
+            </div>
+
+            <!-- Message Input Area -->
+            <div class="chat-input-area">
+                <input type="text" id="messageInput" placeholder="Write a message..." />
+                <button id="sendBtn" onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="chat.js"></script>
+</body>
+</html>
